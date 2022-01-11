@@ -92,7 +92,6 @@ app.get("/help/*", (req, res) => {
         title:"404",
         name:"Rafiq Kamal",
     })
-    // res.send("Help article not found")
 })
 
 app.get("*", (req, res) => {
@@ -102,7 +101,6 @@ app.get("*", (req, res) => {
         title:"404",
         name:"Rafiq Kamal",
     })
-
 })
 
 app.listen(port, () => {
