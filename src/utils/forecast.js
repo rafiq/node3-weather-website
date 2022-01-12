@@ -11,7 +11,10 @@ const forecast = (lat,lon,callback) => {
         } else {
             callback(undefined,{
                 text:`It is currently ${body.current.temperature} degrees fahrenheit with a ${body.current.weather_descriptions[0]} sky. There is a ${body.current.precip}% chance of rain.`,
-                temp:body.current.temperature
+                temp:body.current.feelslike,
+                feelsLike:body.current.feelslike,
+                icon:body.current.weather_icons[0],
+                currentTime:body.location.localtime.split(" ")[1]
             } )
 
         }
